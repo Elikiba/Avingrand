@@ -1446,6 +1446,107 @@ footer {
     50% { transform: translateY(-10px); }
 }
 
+/* Price List Section Styles */
+.pricelist-section {
+    margin: 40px 0;
+    padding: 20px 0;
+    background: #010222;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.pricelist-section h2 {
+    color: var(--gold, #d4af37);
+    font-family: 'Marcellus', serif;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.pricelist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 24px;
+    justify-content: center;
+}
+
+.pricelist-item {
+    background: #020335;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: 180px;
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.pricelist-item:hover {
+    box-shadow: 0 4px 16px rgba(212,175,55,0.15);
+}
+
+.pricelist-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid var(--gold, #d4af37);
+    background: #fff;
+}
+
+.pricelist-details {
+    text-align: center;
+}
+
+.pricelist-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.pricelist-price {
+    display: block;
+    font-size: 1rem;
+    color: var(--gold, #d4af37);
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pricelist-grid {
+        gap: 24px 12px;
+    }
+    .pricelist-item {
+        width: 45vw;
+        min-width: 140px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricelist-grid {
+        gap: 16px 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .pricelist-item {
+        width: 100%;
+        min-width: 120px;
+        max-width: 100%;
+        padding: 12px 6px;
+    }
+    .pricelist-img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
