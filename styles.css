@@ -478,12 +478,33 @@ nav ul li a.active::after {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    width: 100%;
+    height: 80vh;
+    min-height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-placeholder {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 2;
+    background: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+}
+
+.hero-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.12);
 }
 
 .hero-video {
