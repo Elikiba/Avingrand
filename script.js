@@ -651,3 +651,43 @@ function initDatePickers() {
         }
     }
 }
+
+// Payment Modal
+document.addEventListener('DOMContentLoaded', function() {
+    const reserveBtn = document.getElementById('reserveNowBtn');
+    const paymentModal = document.getElementById('paymentModal');
+    const closeModal = document.getElementById('closePaymentModal');
+
+    if (reserveBtn && paymentModal && closeModal) {
+        reserveBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            paymentModal.style.display = 'flex';
+        });
+        closeModal.addEventListener('click', function() {
+            paymentModal.style.display = 'none';
+        });
+        window.addEventListener('click', function(e) {
+            if (e.target === paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing modal logic...
+    const copyBtn = document.getElementById('copyAccountBtn');
+    const accountNumber = document.getElementById('accountNumber');
+    if (copyBtn && accountNumber) {
+        copyBtn.addEventListener('click', function() {
+            navigator.clipboard.writeText(accountNumber.textContent.trim()).then(function() {
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(function() {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                }, 1500);
+            });
+        });
+    }
+});

@@ -961,6 +961,43 @@ nav ul li a.active::after {
     opacity: 0.8;
 }
 
+/* Ensure Book Your Stay button is always visible on mobile */
+.rooms-preview-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.rooms-preview-cta .btn {
+    min-width: 180px;
+    font-size: 1.1em;
+    padding: 12px 28px;
+}
+
+@media (max-width: 600px) {
+    .rooms-preview-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(24,24,24,0.97);
+        z-index: 999;
+        margin: 0;
+        padding: 12px 0 8px 0;
+        box-shadow: 0 -2px 16px rgba(0,0,0,0.12);
+    }
+    .rooms-preview-cta .btn {
+        width: 90vw;
+        max-width: 98vw;
+        font-size: 1.15em;
+        padding: 14px 0;
+    }
+    .rooms-preview-cta .cta-subtext {
+        display: none;
+    }
+}
+
 /* Experience Cards */
 .experience-grid {
     display: grid;
@@ -1689,4 +1726,115 @@ footer {
     .preloader-logo {
         font-size: 2.5rem;
     }
+}
+
+/* Add to styles.css */
+/* ...existing code... */
+
+/* Ensure Book Your Stay button is always visible on mobile */
+.rooms-preview-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.rooms-preview-cta .btn {
+    min-width: 180px;
+    font-size: 1.1em;
+    padding: 12px 28px;
+}
+
+@media (max-width: 600px) {
+    .rooms-preview-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(24,24,24,0.97);
+        z-index: 999;
+        margin: 0;
+        padding: 12px 0 8px 0;
+        box-shadow: 0 -2px 16px rgba(0,0,0,0.12);
+    }
+    .rooms-preview-cta .btn {
+        width: 90vw;
+        max-width: 98vw;
+        font-size: 1.15em;
+        padding: 14px 0;
+    }
+    .rooms-preview-cta .cta-subtext {
+        display: none;
+    }
+}
+
+/* ...existing code... */
+
+.payment-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(24,24,24,0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-modal-content {
+    background: #222;
+    color: #fff;
+    border-radius: 16px;
+    max-width: 350px;
+    width: 90vw;
+    margin: auto;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px; right: 18px;
+    font-size: 1.6rem;
+    color: #d4af37;
+    cursor: pointer;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 18px 0 0 0;
+}
+
+#copyAccountBtn {
+    background: #181818;
+    color: var(--gold, #d4af37);
+    border: 1px solid var(--gold, #d4af37);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 8px;
+    font-size: 0.95em;
+    padding: 2px 12px;
+    vertical-align: middle;
+}
+
+#copyAccountBtn:active,
+#copyAccountBtn.copied {
+    background: var(--gold, #d4af37);
+    color: #181818;
+    border-color: #181818;
+}
+
+.payment-modal-content #accountNumber {
+    font-family: 'Plus Jakarta Sans', monospace;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    background: #222;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 2px;
 }
