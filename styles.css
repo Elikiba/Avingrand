@@ -1690,35 +1690,3 @@ footer {
         font-size: 2.5rem;
     }
 }
-
-/* Add to styles.css */
-.service-video-wrapper {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #181818;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-}
-
-@media (max-width: 900px) {
-    .service-video-wrapper {
-        height: 160px;
-    }
-}
-
-@media (max-width: 600px) {
-    .service-video-wrapper {
-        height: 120px;
-    }
-}
