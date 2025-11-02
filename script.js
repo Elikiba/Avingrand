@@ -691,13 +691,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileImg = document.querySelector('.about-img-sm');
-    const mobilePlaceholder = document.querySelector('.about-img-sm-placeholder');
-    if (mobileImg && mobilePlaceholder) {
-        mobileImg.addEventListener('load', function() {
-            mobilePlaceholder.style.display = 'none';
-        });
-    }
-});
